@@ -1,0 +1,326 @@
+body {
+  animation-name: clock-animation;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  overflow-x: hidden;
+  font-family: cursive;
+  background-color: rgb(232, 232, 232);
+}
+.content {
+  width: 370px;
+  height: 700px;
+  position: relative;
+  margin-top: 25vh;
+}
+.shape {
+  width: 350px;
+  height: 350px;
+  border: 6px solid rgb(225, 225, 225);
+  border-radius: 50%;
+  position: relative;
+  background: #ffffff;
+  box-shadow: 18px 18px 26px #6e6e6e, -18px -18px 26px #ffffff;
+}
+
+.shape::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: rgb(0, 0, 0);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.cur-date {
+  position: absolute;
+  font-size: 12px;
+  font-weight: bold;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40%;
+  left: 51%;
+}
+
+.current-seconds {
+  position: absolute;
+  font-size: 12px;
+  font-weight: bold;
+  left: 51%;
+  transform: translateX(-50%);
+  bottom: 30%;
+  background: rgb(49, 49, 49);
+  color: #fff;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.clock-number {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.clock-number::after {
+  content: "";
+  position: absolute;
+  height: 13px;
+  width: 3px;
+  top: 13%;
+  background: rgb(39, 39, 39);
+}
+
+.clock-number > div {
+  padding: 12px;
+}
+
+.num1 {
+  transform: rotate(30deg);
+}
+
+.num1 > div {
+  transform: rotate(-30deg);
+}
+
+.num2 {
+  transform: rotate(60deg);
+}
+
+.num2 > div {
+  transform: rotate(-60deg);
+}
+
+.num3 {
+  transform: rotate(90deg);
+}
+
+.num3 > div {
+  transform: rotate(-90deg);
+}
+
+.num4 {
+  transform: rotate(120deg);
+}
+
+.num4 > div {
+  transform: rotate(-120deg);
+}
+
+.num5 {
+  transform: rotate(150deg);
+}
+
+.num5 > div {
+  transform: rotate(-150deg);
+}
+
+.num6 {
+  transform: rotate(180deg);
+}
+
+.num6 > div {
+  transform: rotate(-180deg);
+}
+
+.num7 {
+  transform: rotate(210deg);
+}
+
+.num7 > div {
+  transform: rotate(-210deg);
+}
+
+.num8 {
+  transform: rotate(240deg);
+}
+
+.num8 > div {
+  transform: rotate(-240deg);
+}
+
+.num9 {
+  transform: rotate(270deg);
+}
+
+.num9 > div {
+  transform: rotate(-270deg);
+}
+
+.num10 {
+  transform: rotate(300deg);
+}
+
+.num10 > div {
+  transform: rotate(-300deg);
+}
+
+.num11 {
+  transform: rotate(330deg);
+}
+
+.num11 > div {
+  transform: rotate(-330deg);
+}
+
+.num12 {
+  transform: rotate(360deg);
+}
+
+.num12 > div {
+  transform: rotate(-360deg);
+}
+
+.clock-hand {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.clock-hand > div {
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  border-radius: 12px;
+}
+.second-hand {
+  height: 32%;
+  width: 1px;
+  background-color: rgb(251, 0, 0);
+}
+.minute-hand {
+  height: 32%;
+  width: 3px;
+  background-color: #001eff;
+}
+.hour-hand {
+  height: 25%;
+  width: 5px;
+  background-color: #000000;
+}
+.holder {
+  width: 30px;
+  height: 20px;
+  background: black;
+  margin: auto;
+  border-radius: 0 0 50% 50%;
+}
+
+.thread {
+  display: inline-block;
+  width: 2px;
+  height: 200px;
+  background: black;
+  border-radius: 5px;
+  position: relative;
+  transform-origin: 50% 0;
+  animation: moveIt 2.5s ease-in-out infinite;
+  left: 50%;
+}
+
+.thread:after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgb(34, 34, 34);
+  border: 2px solid white;
+  top: -4.5px;
+  left: -3.5px;
+}
+
+.knob {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: -18px;
+  left: -4.5px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  border-bottom: 2px solid transparent;
+}
+
+.pendulum {
+  width: 20px;
+  height: 20px;
+  background: -moz-radial-gradient(
+    circle at 70% 35%,
+    white,
+    #000000 30%,
+    #000000 50%
+  );
+  background: -webkit-radial-gradient(
+    circle at 70% 35%,
+    white,
+    #000000 30%,
+    #000000 50%
+  );
+  background: -o-radial-gradient(
+    circle at 70% 35%,
+    white,
+    #000000 30%,
+    #000000 50%
+  );
+  background: -ms-radial-gradient(
+    circle at 70% 35%,
+    white,
+    #000000 30%,
+    #000000 50%
+  );
+  background: radial-gradient(
+    circle at 70% 35%,
+    white,
+    #000000 30%,
+    #000000 50%
+  );
+  border-radius: 50%;
+  position: absolute;
+  bottom: -10px;
+  left: -9px;
+}
+
+.shadow {
+  width: 30px;
+  height: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  margin: 50px auto 0;
+  animation: moveShade 1.25s ease-in-out alternate infinite;
+}
+
+@keyframes moveIt {
+  0%,
+  100% {
+    transform: rotate(45deg);
+  }
+
+  50% {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes moveShade {
+  0% {
+    transform: translateX(-220px) scale(1.4, 0.5);
+    filter: blur(20px);
+  }
+
+  50% {
+    filter: blur(3px);
+  }
+
+  100% {
+    transform: translateX(220px) scale(1.4, 0.5);
+    filter: blur(20px);
+  }
+}
