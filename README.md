@@ -14,4 +14,4 @@ Our webpage features an elegant and functional analog clock built with modern we
 
 https://avijit-roy.github.io/Analog-clock/index.html
 
-![](https://github.com/Avijit-roy/Enigma-Zone/main/Screenshot789.png)
+![](https://github.com/Avijit-roy/Analog-clock/blob/main/Screenshot789.png)
